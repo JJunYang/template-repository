@@ -8,7 +8,8 @@
   "scripts": {
     "build:dev": "webpack --mode development",
     "clean": "rm dist -r",
-    "format": "prettier --cache --write .",
+    "prettier": "prettier --cache --write ./src",
+    "lint": "eslint --fix ./src",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
@@ -35,6 +36,8 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "html-webpack-plugin": "^5.5.3",
     "husky": "^8.0.3",
     "less": "^4.1.3",
