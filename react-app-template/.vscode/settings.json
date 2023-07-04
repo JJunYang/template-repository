@@ -17,15 +17,5 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": [
-    "antd",
-    "Floorplan",
-    "GDSII",
-    "nangate",
-    "NGNATE",
-    "Raina",
-    "umijs",
-    "flexlayout",
-    "iconfont"
-  ]
+  "cSpell.words": []
 }

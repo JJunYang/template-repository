@@ -8,13 +8,13 @@
   "scripts": {
     "build:dev": "webpack --mode development",
     "clean": "rm dist -r",
-    "prettier": "prettier --cache --write ./src",
     "lint": "eslint --fix ./src",
+    "lint-staged": "lint-staged",
     "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "prettier": "prettier --cache --write ./src"
   },
   "lint-staged": {
-    "{src,mock}/**/*.{ts,tsx,js,jsx}": [
+    "src/**/*.{ts,tsx,js,jsx}": [
       "eslint --fix --max-warnings 0",
       "prettier --write"
     ]
