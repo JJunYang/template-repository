@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# umi max 默认
+# npx --no-install max verify-commit $1
+
+# 手动配置 使用commitlint
+npx --no -- commitlint --edit $1
