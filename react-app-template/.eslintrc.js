@@ -7,8 +7,8 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   plugins: ['@typescript-eslint'],
-  ignorePatterns: ['.eslintrc.js'],
   rules: {
     'no-underscore-dangle': 'off',
+    'no-empty': 'off',
   },
 };

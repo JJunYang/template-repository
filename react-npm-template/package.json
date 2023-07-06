@@ -8,8 +8,8 @@
   "scripts": {
     "build": "npx tsc",
     "dev": "npx tsc --watch",
-    "lint": "eslint --fix ./src",
-    "lint-staged": "lint-staged",
+    "lint": "eslint --fix",
+    "pre-commit": "lint-staged",
     "prepare": "husky install",
     "prettier": "prettier --cache --write ./src"
   },

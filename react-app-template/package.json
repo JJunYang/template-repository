@@ -8,8 +8,8 @@
   "scripts": {
     "build:dev": "webpack --mode development",
     "clean": "rm dist -r",
-    "lint": "eslint --fix ./src",
-    "lint-staged": "lint-staged",
+    "lint": "eslint --fix",
+    "pre-commit": "lint-staged",
     "prepare": "husky install",
     "prettier": "prettier --cache --write ./src"
   },
