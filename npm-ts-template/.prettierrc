@@ -4,6 +4,7 @@
   "trailingComma": "all",
   "proseWrap": "never",
   "tabWidth": 2,
+  "endOfLine": "auto",
   "overrides": [
     {
       "files": ".prettierrc",
@@ -12,5 +13,8 @@
       }
     }
   ],
-  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-packagejson"]
+  "plugins": [
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-packagejson"
+  ]
 }
