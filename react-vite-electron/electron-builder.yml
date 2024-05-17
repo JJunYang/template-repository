@@ -1,0 +1,16 @@
+appId: yakit
+productName: yakit
+directories: 
+  output: build
+files:
+  - 'dist/**/*'
+win: 
+  executableName: yakit
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  artifactName: ${name}-${version}-setup.${ext}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+
+

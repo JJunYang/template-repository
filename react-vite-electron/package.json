@@ -1,0 +1,62 @@
+{
+  "name": "yakit",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/main/index.js",
+  "author": {
+    "email": "jjy_yang@163.com",
+    "name": "JJunYang"
+  },
+  "description": "Personal Desktop Kit",
+  "scripts": {
+    "build": "npm run build:render && npm run build:electron",
+    "build:electron": "tsc -p ./src/main",
+    "build:render": "vite build",
+    "dev": "concurrently \"npm run dev:render\" \"npm run dev:main\" \"wait-on ./dist/main/index.js && npm run dev:start\"",
+    "dev:main": "tsc -p ./src/main --watch",
+    "dev:render": "vite",
+    "dev:start": "cross-env IS_ENV=true electron .",
+    "format": "prettier --cache --write .",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prepare": "husky",
+    "preview": "vite preview",
+    "dist": "electron-builder --win",
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps",
+    "test": "lint-staged"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^30.0.2",
+    "electron-builder": "^24.13.3",
+    "electron-reload": "^2.0.0-alpha.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-packagejson": "^2.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "wait-on": "^7.2.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix --max-warnings 0",
+      "prettier --write"
+    ]
+  }
+}
